@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokiPride</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav>
+        <div class="navbar">
+            <a href="#" class="navbar-logo">Joki<span>Pride</span></a>
+
+            <div class="navbar-nav">
+                <a href="#">Home</a>
+                <a href="#about">Tentang</a>
+                <a href="#services">Layanan</a>
+                <a href="#contact">Kontak</a>
+                <a href="#order">Pemesanan</a>
+            </div>
+               
+            <div class="navbar-extra">
+                <a id="search-btn"><i data-feather="search"></i></a>
+                <a id="hamburger-menu"><i data-feather="menu"></i></a>
+            </div>
+
+            <div class="search-after">
+                <input type="search" id="search-box" placeholder="cari disini..">
+                <label for="search-box"><i data-feather="search"></i></label>
+            </div>
+        </div>        
+    </nav>
+    <!-- navbar  end -->
+
+    <!-- hero section start -->
+    <section class="hero">
+        <main class="hero-main" id="#home">
+            <h1>Jasa Joki Gratis Jika di <span>Bayar.</span></h1>
+            <p>Untuk percobaan pertama itu Gratis jika anda membayar</p>
+            <a href="#" class="cta">Coba Sekarang</a>
+        </main>
+    </section>
+    <!-- hero section end -->
+
+    <!-- about start -->
+     <section id="about" class="about">
+        <h2><span>Tentang</span> Kami.</span></h2>
+
+        <div class="row">
+            <div class="about-img">
+                <img src="assets/about-img.jpg" alt="Tentang Kami">
+            </div>
+            <div class="content">
+                <h3>Kenapa harus Joki<span>Pride</span> ?</h3>
+                    <p>Kami adalah sekelompok anak muda yang memiliki keinginan untuk memberikan layanan berupa jasa Pengerjaan tugas.</p>
+                    <p>Tetapi bukan hanya keinginan yang kami tawarkan, kami juga memiliki keahlian untuk memberikan hasil sesuai keinginan client kami.</p>
+                <a href="#services" class="cta">Lihat Layanan Kami Sekarang</a>
+            </div>
+        </div>
+     </section>
+    <!-- about end -->
+
+    <!-- slide start -->
+     <section>
+        <h2 class="judul">Preview <span>Jasa.</span></h2>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="assets/slider1.png" alt="Image 1"></div>
+                <div class="slide"><img src="assets/slider2.png" alt="Image 2"></div>
+                <div class="slide"><img src="assets/slider3.png" alt="Image 3"></div>
+                <div class="slide"><img src="assets/slider4.png" alt="Image 3"></div>
+                <div class="slide"><img src="assets/slider5.png" alt="Image 3"></div>
+                <div class="slide"><img src="assets/slider6.png" alt="Image 3"></div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio cupiditate sunt. Rerum, in facilis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio cupiditate sunt. Rerum, in facilis.</p>
+            </div>
+        </div>
+     </section>
+    <!-- slide end -->
+
+    <!-- services start -->
+     <section id="services" class="services">
+        <h2><span>Layanan</span> Kami.</span></h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, voluptatem!</p>
+
+        <div class="card">
+            <div class="services-card">
+                <div class="services-icon">
+                    <a class="item-detail-button"><i data-feather="eye"></i></a>
+                </div>
+                <div class="services-img"><img src="assets/ppt.jpg" alt="Powerpoint">
+                    <h3>Powerpoint.</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, aliquid.</p>
+                </div>
+            </div>
+            <div class="services-card">
+                <div class="services-icon">
+                    <a class="item-detail-button"><i data-feather="eye"></i></a>
+                </div>
+                <div class="services-img"><img src="assets/poster.jpg" alt="Poster">
+                    <h3>Desain Poster.</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, aliquid.</p>
+                </div>
+            </div>
+            <div class="services-card">
+                <div class="services-icon">
+                    <a class="item-detail-button"><i data-feather="eye"></i></a>
+                </div>
+                <div class="services-img"><img src="assets/makalah.jpg" alt="makalah">
+                    <h3>Makalah.</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, aliquid.</p>
+                </div>
+            </div>
+            <div class="services-card">
+                <div class="services-icon">
+                    <a class="item-detail-button"><i data-feather="eye"></i></a>
+                </div>
+                <div class="services-img"><img src="assets/vid.jpg" alt="video">
+                    <h3>Editing Video.</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, aliquid.</p>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- services end -->
+
+    <!-- contact start -->
+     <section id="contact" class="contact">
+        <h2><span>Kontak</span> Kami.</span></h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, voluptatem!</p>
+
+        <div class="container">
+
+            <div class="contact-container">
+                <ul>
+                    <li>
+                        <i data-feather="phone"></i> Nomor Telepon : +62 812 3456 7890
+                    </li>
+                    <li>
+                        <i data-feather="message-circle"></i> Nomor WhatsApp : +62 812 3456 7890
+                    </li>
+                    <li>
+                        <i data-feather="facebook"></i> Facebook : <a href="https://facebook.com/yourpage">facebook.com/yourpage</a>
+                    </li>
+                    <li>
+                        <i data-feather="instagram"></i> Instagram : <a href="https://instagram.com/yourpage">instagram.com/yourpage</a>
+                    </li>
+                    <li>
+                        <i data-feather="youtube"></i> YouTube : <a href="https://youtube.com/yourpage">youtube.com/yourpage</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hbg">
+                <h3>Hubungi kami <span>Segera!!</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptas distinctio eius exercitationem facilis debitis?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptas distinctio eius exercitationem facilis debitis?</p>
+            </div>
+        </div>
+     </section>
+    <!-- contact start -->
+
+    <section id="order" class="order">
+        <h2><span>Formulir</span> Pemesanan.</span></h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, voluptatem!</p>
+
+            <div class="container">
+
+                <div class="form-container">
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="name"><i data-feather="user"></i>  Nama</label>
+                            <input type="text" id="name" name="name" required placeholder="Masukan nama anda..">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><i data-feather="phone"></i>  Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Nomor yang bisa dihubungi..">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Jenis Layanan</label>
+                            <select id="service" name="service" required>
+                                <option value="Tugas Presentasi">Tugas Presentasi</option>
+                                <option value="Makalah">Makalah</option>
+                                <option value="Editing Foto/Video">Editing Foto/Video</option>
+                                <option value="Pembuatan Poster">Pembuatan Poster</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="details">Detail Pesanan</label>
+                            <textarea id="details" name="details" rows="5" required placeholder="Sebutkan hal yang diinginkan dan tidak diinginkan.."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Kirim Pesanan</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="content">
+                    <h3>Panduan Pengisian!!</h3>
+                    <ul> 
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
+                    </ul>
+                </div>   
+            </div>
+    </section>
+
+    <!-- footer start -->
+     <footer>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#services">Layanan Kami</a>
+            <a href="#contact">Kontak Kami</a>
+            <a href="#order">Formulir Pesanan</a>
+        </div>
+
+        <div class="credit">
+            <p>Created by <a href="">akbilahmd</a>. | &copy 2024.</p>
+        </div>
+     </footer>
+    <!-- footer end -->
+
+    <!-- modal box start -->
+     <div class="modal" id="item-detail-modal-1">
+        <div class="modal-container">
+            <a href="#" class="close-icon"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="assets/ppt.jpg" alt="ppt">
+                <div class="product-content">
+                    <h3>Powerpoint</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, eos.</p>
+                    <a href="#order" class="to-order"><i data-feather="mouse-pointer"></i> Pesan sekarang</a>
+                </div>
+                <div class="product-price">
+                    <h4>Harga:</h4>
+                    <h5>IDR xxK - IDR xxK</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, enim.</p>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- modal box end -->
+
+    <!-- feather icons -->
+    <script>
+        feather.replace();
+    </script>
+
+    <!-- my java script -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
