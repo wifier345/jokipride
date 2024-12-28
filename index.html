@@ -1,3 +1,7 @@
+<?php
+    include "koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +23,10 @@
     <!-- navbar start -->
     <nav>
         <div class="navbar">
-            <a href="#" class="navbar-logo">Joki<span>Pride</span></a>
+            <a href="#" class="navbar-logo">
+                <img src="assets/J.png" alt="logo">
+                <h4>Joki<span>Pride</span></h4>
+            </a>
 
             <div class="navbar-nav">
                 <a href="#">Home</a>
@@ -28,7 +35,7 @@
                 <a href="#contact">Kontak</a>
                 <a href="#order">Pemesanan</a>
             </div>
-               
+
             <div class="navbar-extra">
                 <a id="search-btn"><i data-feather="search"></i></a>
                 <a id="hamburger-menu"><i data-feather="menu"></i></a>
@@ -38,7 +45,7 @@
                 <input type="search" id="search-box" placeholder="cari disini..">
                 <label for="search-box"><i data-feather="search"></i></label>
             </div>
-        </div>        
+        </div>
     </nav>
     <!-- navbar  end -->
 
@@ -47,13 +54,13 @@
         <main class="hero-main" id="#home">
             <h1>Jasa Joki Gratis Jika di <span>Bayar.</span></h1>
             <p>Untuk percobaan pertama itu Gratis jika anda membayar</p>
-            <a href="#" class="cta">Coba Sekarang</a>
+            <a href="#services" class="cta">Coba Sekarang</a>
         </main>
     </section>
     <!-- hero section end -->
 
     <!-- about start -->
-     <section id="about" class="about">
+    <section id="about" class="about">
         <h2><span>Tentang</span> Kami.</span></h2>
 
         <div class="row">
@@ -62,19 +69,68 @@
             </div>
             <div class="content">
                 <h3>Kenapa harus Joki<span>Pride</span> ?</h3>
-                    <p>Kami adalah sekelompok anak muda yang memiliki keinginan untuk memberikan layanan berupa jasa Pengerjaan tugas.</p>
-                    <p>Tetapi bukan hanya keinginan yang kami tawarkan, kami juga memiliki keahlian untuk memberikan hasil sesuai keinginan client kami.</p>
+                <p>Kami adalah sekelompok anak muda yang memiliki keinginan untuk memberikan layanan berupa jasa
+                    Pengerjaan tugas.</p>
+                <p>Tetapi bukan hanya keinginan yang kami tawarkan, kami juga memiliki keahlian untuk memberikan hasil
+                    sesuai keinginan client kami.</p>
                 <a href="#services" class="cta">Lihat Layanan Kami Sekarang</a>
             </div>
         </div>
-     </section>
+    </section>
     <!-- about end -->
 
+    <!-- services start -->
+    <section id="services" class="services">
+        <h2><span>Layanan</span> Kami.</span></h2>
+        <p>Lihatlah layanan-layanan yang kami sediakan untuk anda.</p>
+
+        <div class="card">
+            <div class="services-card">
+                <div class="services-icon">
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+                </div>
+                <div class="services-img"><img src="assets/ppt.jpg" alt="Powerpoint">
+                    <h3>Powerpoint.</h3>
+                    <p>Pembuatan Slide Powerpoint, kami membuat slide-slide untuk presentasi anda yang sempurna.</p>
+                </div>
+            </div>
+            <div class="services-card">
+                <div class="services-icon">
+                    <a href="#" class="item-detail-button-1"><i data-feather="eye"></i></a>
+                </div>
+                <div class="services-img"><img src="assets/poster.jpg" alt="Poster">
+                    <h3>Desain Poster.</h3>
+                    <p>Pembuatan Poster, poster buatan kami diharapkan bisa menangani tugas anda. Baik itu pemasaran barang/jasa atau bahkan hanya untuk sekedar tugas.</p>
+                </div>
+            </div>
+            <div class="services-card">
+                <div class="services-icon">
+                    <a href="#" class="item-detail-button-2"><i data-feather="eye"></i></a>
+                </div>
+                <div class="services-img"><img src="assets/makalah.jpg" alt="makalah">
+                    <h3>Makalah.</h3>
+                    <p>Kami membuat makalah-makalah sederhana tetapi tetap tidak melupakan yang namanya kejelasan, baik untuk laporan atau tugas.</p>
+                </div>
+            </div>
+            <div class="services-card">
+                <div class="services-icon">
+                    <a href="#" class="item-detail-button-3"><i data-feather="eye"></i></a>
+                </div>
+                <div class="services-img"><img src="assets/vid.jpg" alt="video">
+                    <h3>Editing Video.</h3>
+                    <p>Editing video profesinal maupun bergaya jaman now bisa kamu dapatkan. Bukan hanya itu tetapi juga untuk video-video tugas seperti wawancara,tutorial,dan lain-lain, serta ada juga editor AE kami yang bersedia membuatkan anda Video bergaya keren.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services end -->
+
     <!-- slide start -->
-     <section>
+    <section id="previews">
         <h2 class="judul">Preview <span>Jasa.</span></h2>
         <div class="slider">
-            <div class="slides">
+            <h3>Powerpoint</h3>
+            <div class="slides-ppt">
                 <div class="slide"><img src="assets/slider1.png" alt="Image 1"></div>
                 <div class="slide"><img src="assets/slider2.png" alt="Image 2"></div>
                 <div class="slide"><img src="assets/slider3.png" alt="Image 3"></div>
@@ -86,63 +142,18 @@
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
 
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio cupiditate sunt. Rerum, in facilis.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio cupiditate sunt. Rerum, in facilis.</p>
+                <p>Itulah contoh dari hasil joki web kami, kami menerima semua kritikan dan tanggapan yang diberikan pelanggan website kami tanpa perlu menunggu lama untuk mendapat balasan.</p>
+                <p>Untuk Preview Jasa lainnya belum bisa kami bagikan karena web ini juga masih dalam tahap pengembangan.</p>
             </div>
         </div>
-     </section>
+        </div>
+    </section>
     <!-- slide end -->
 
-    <!-- services start -->
-     <section id="services" class="services">
-        <h2><span>Layanan</span> Kami.</span></h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, voluptatem!</p>
-
-        <div class="card">
-            <div class="services-card">
-                <div class="services-icon">
-                    <a class="item-detail-button"><i data-feather="eye"></i></a>
-                </div>
-                <div class="services-img"><img src="assets/ppt.jpg" alt="Powerpoint">
-                    <h3>Powerpoint.</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, aliquid.</p>
-                </div>
-            </div>
-            <div class="services-card">
-                <div class="services-icon">
-                    <a class="item-detail-button"><i data-feather="eye"></i></a>
-                </div>
-                <div class="services-img"><img src="assets/poster.jpg" alt="Poster">
-                    <h3>Desain Poster.</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, aliquid.</p>
-                </div>
-            </div>
-            <div class="services-card">
-                <div class="services-icon">
-                    <a class="item-detail-button"><i data-feather="eye"></i></a>
-                </div>
-                <div class="services-img"><img src="assets/makalah.jpg" alt="makalah">
-                    <h3>Makalah.</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, aliquid.</p>
-                </div>
-            </div>
-            <div class="services-card">
-                <div class="services-icon">
-                    <a class="item-detail-button"><i data-feather="eye"></i></a>
-                </div>
-                <div class="services-img"><img src="assets/vid.jpg" alt="video">
-                    <h3>Editing Video.</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, aliquid.</p>
-                </div>
-            </div>
-        </div>
-     </section>
-    <!-- services end -->
-
     <!-- contact start -->
-     <section id="contact" class="contact">
+    <section id="contact" class="contact">
         <h2><span>Kontak</span> Kami.</span></h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, voluptatem!</p>
+        <p>Hubungi kami jika anda tertarik dengan jasa-jasa kami!</p>
 
         <div class="container">
 
@@ -155,76 +166,82 @@
                         <i data-feather="message-circle"></i> Nomor WhatsApp : +62 812 3456 7890
                     </li>
                     <li>
-                        <i data-feather="facebook"></i> Facebook : <a href="https://facebook.com/yourpage">facebook.com/yourpage</a>
+                        <i data-feather="facebook"></i> Facebook : <a
+                            href="https://facebook.com/yourpage">facebook.com/yourpage</a>
                     </li>
                     <li>
-                        <i data-feather="instagram"></i> Instagram : <a href="https://instagram.com/yourpage">instagram.com/yourpage</a>
+                        <i data-feather="instagram"></i> Instagram : <a
+                            href="https://instagram.com/yourpage">instagram.com/yourpage</a>
                     </li>
                     <li>
-                        <i data-feather="youtube"></i> YouTube : <a href="https://youtube.com/yourpage">youtube.com/yourpage</a>
+                        <i data-feather="youtube"></i> YouTube : <a
+                            href="https://youtube.com/yourpage">youtube.com/yourpage</a>
                     </li>
                 </ul>
             </div>
 
             <div class="hbg">
-                <h3>Hubungi kami <span>Segera!!</span></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptas distinctio eius exercitationem facilis debitis?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptas distinctio eius exercitationem facilis debitis?</p>
+                <h3>Kenapa Memilih <span>Kami?</span></h3>
+                <p><span>Profesional:</span> Kami berkomitmen memberikan hasil terbaik dengan standar profesional.</p>
+                <p><span>Kreatif:</span> Setiap pekerjaan dilakukan dengan kreativitas tinggi dan inovasi.</p>
+                <p><span>Cepat dan Tepat:</span> Kami menjamin hasil yang cepat dan sesuai dengan jadwal yang disepakati..</p>
+                <p><span>Layanan Pelanggan:</span> Kami selalu siap membantu dan memberikan layanan terbaik untuk Anda.</p>
             </div>
         </div>
-     </section>
+    </section>
     <!-- contact start -->
 
     <section id="order" class="order">
         <h2><span>Formulir</span> Pemesanan.</span></h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, voluptatem!</p>
+        <p>Untuk memudahkan proses pemesanan, silakan ikuti panduan di bawah ini :</p>
 
-            <div class="container">
+        <div class="container">
 
-                <div class="form-container">
-                    <form id="orderForm">
-                        <div class="form-group">
-                            <label for="name"><i data-feather="user"></i>  Nama</label>
-                            <input type="text" id="name" name="name" required placeholder="Masukan nama anda..">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone"><i data-feather="phone"></i>  Nomor Telepon</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="Nomor yang bisa dihubungi..">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Jenis Layanan</label>
-                            <select id="service" name="service" required>
-                                <option value="Tugas Presentasi">Tugas Presentasi</option>
-                                <option value="Makalah">Makalah</option>
-                                <option value="Editing Foto/Video">Editing Foto/Video</option>
-                                <option value="Pembuatan Poster">Pembuatan Poster</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="details">Detail Pesanan</label>
-                            <textarea id="details" name="details" rows="5" required placeholder="Sebutkan hal yang diinginkan dan tidak diinginkan.."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit">Kirim Pesanan</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="content">
-                    <h3>Panduan Pengisian!!</h3>
-                    <ul> 
-                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
-                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
-                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
-                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
-                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
-                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, omnis.</li>
-                    </ul>
-                </div>   
+            <div class="form-container">
+                <form action="submit.php" method="post" id="orderForm">
+                    <div class="form-group">
+                        <label for="name"><i data-feather="user"></i> Nama</label>
+                        <input type="text" id="name" name="nama" required placeholder="Masukan nama anda..">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"><i data-feather="phone"></i> Nomor Telepon</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Nomor yang bisa dihubungi..">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Jenis Layanan</label>
+                        <select id="service" name="services" required>
+                            <option value="Tugas Presentasi">Tugas Presentasi</option>
+                            <option value="Makalah">Makalah</option>
+                            <option value="Editing Foto/Video">Editing Foto/Video</option>
+                            <option value="Pembuatan Poster">Pembuatan Poster</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Detail Pesanan</label>
+                        <textarea id="details" name="details" rows="5" required
+                            placeholder="Sebutkan hal yang diinginkan dan tidak diinginkan.."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="item-detail-button-0" type="submit" name="csi">Kirim Pesanan</button>
+                    </div>
+                </form>
             </div>
+            <div class="content">
+                <h3>Panduan Pengisian!!</h3>
+                <ul>
+                    <li>Buka Formulir : Pastikan Anda memiliki akses ke formulir pemesanan yang telah disediakan.</li>
+                    <li>Isi Kolom Nama : Masukkan nama lengkap Anda pada kolom yang tersedia..</li>
+                    <li>Isi Kolom Nomor Handphone : Masukkan nomor handphone Anda yang aktif.</li>
+                    <li>Pilih Jenis Jasa/Layanan : Pilih salah satu jenis jasa yang Anda butuhkan dari opsi yang diberikan</li>
+                    <li>Isi Detail Pesanan : Jelaskan secara rinci kebutuhan dan spesifikasi pesanan Anda</li>
+                    <li>Kirim Formulir : Setelah semua kolom terisi dengan benar, kirim formulir pemesanan ke kontak yang telah disediakan.</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <!-- footer start -->
-     <footer>
+    <footer>
         <div class="links">
             <a href="#home">Home</a>
             <a href="#about">Tentang Kami</a>
@@ -236,29 +253,114 @@
         <div class="credit">
             <p>Created by <a href="">akbilahmd</a>. | &copy 2024.</p>
         </div>
-     </footer>
+    </footer>
     <!-- footer end -->
 
+
     <!-- modal box start -->
-     <div class="modal" id="item-detail-modal-1">
+    <!-- modal -->
+    <div class="modal" id="item-detail-modal">
         <div class="modal-container">
             <a href="#" class="close-icon"><i data-feather="x"></i></a>
             <div class="modal-content">
                 <img src="assets/ppt.jpg" alt="ppt">
                 <div class="product-content">
                     <h3>Powerpoint</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, eos.</p>
-                    <a href="#order" class="to-order"><i data-feather="mouse-pointer"></i> Pesan sekarang</a>
+                    <p>Kami menyediakan jasa pembuatan presentasi PowerPoint yang profesional dan menarik. Dengan desain yang kreatif dan konten yang informatif, presentasi Anda akan memukau audiens.</p>
+                    <div class="btn-modal">
+                        <a href="#order" class="to-order"><i data-feather="mouse-pointer"></i> Pesan sekarang</a>
+                        <a href="#previews" class="to-preview"><i data-feather="eye"></i> Lihat Jasa</a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    <h4>Harga:</h4>
+                    <h5>IDR 20.000 - IDR 50.000K</h5>
+                    <p><span>Fitur:</span> Desain custom sesuai tema, animasi dan transisi menarik, revisi hingga 3 kali.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-1" id="item-detail-modal-1">
+        <div class="modal-container-1">
+            <a href="#" class="close-icon-1"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="assets/poster.jpg" alt="ppt">
+                <div class="product-content">
+                    <h3>Desain Poster</h3>
+                    <p>Kami menawarkan jasa desain poster yang kreatif dan menarik, cocok untuk berbagai keperluan seperti acara, promosi, atau iklan. Desain kami akan membantu pesan Anda tersampaikan dengan efektif..</p>
+                    <div class="btn-modal">
+                        <a href="#order" class="to-order-1"><i data-feather="mouse-pointer"></i> Pesan sekarang</a>
+                        <a href="#previews" class="to-preview-1"><i data-feather="eye"></i> Lihat Jasa</a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    <h4>Harga:</h4>
+                    <h5>IDR 15.000 - IDR 30.000</h5>
+                    <p><span>Fitur:</span> Desain custom sesuai tema, file dalam format JPG/PNG dan PDF, revisi hingga 3 kali.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-2" id="item-detail-modal-2">
+        <div class="modal-container-2">
+            <a href="#" class="close-icon-2"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="assets/makalah.jpg" alt="ppt">
+                <div class="product-content">
+                    <h3>Makalah</h3>
+                    <p>Kami menyediakan jasa pembuatan makalah yang lengkap dan terstruktur, sesuai dengan standar akademik. Makalah dibuat dengan riset mendalam dan penulisan yang jelas dan padat.</p>
+                    <div class="btn-modal">
+                        <a href="#order" class="to-order-2"><i data-feather="mouse-pointer"></i> Pesan sekarang</a>
+                        <a href="#previews" class="to-preview-2"><i data-feather="eye"></i> Lihat Jasa</a>
+                    </div>
+                </div>
+                <div class="product-price">
+                    <h4>Harga:</h4>
+                    <h5>IDR 15.000 - IDR 20.000</h5>
+                    <p><span>Fitur:</span> Riset mendalam, penulisan sesuai format akademik, revisi hingga 2 kali.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-3" id="item-detail-modal-3">
+        <div class="modal-container-3">
+            <a href="#" class="close-icon-3"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="assets/vid.jpg" alt="ppt">
+                <div class="product-content">
+                    <h3>Editing Video</h3>
+                    <p>Kami menyediakan jasa editing video yang profesional dan menarik, baik untuk konten YouTube, media sosial, ataupun keperluan pribadi.</p>
+                    <div class="btn-modal">
+                        <a href="#order" class="to-order-3"><i data-feather="mouse-pointer"></i> Pesan sekarang</a>
+                        <a href="#previews" class="to-preview-3"><i data-feather="eye"></i> Lihat Jasa</a>
+                    </div>
                 </div>
                 <div class="product-price">
                     <h4>Harga:</h4>
                     <h5>IDR xxK - IDR xxK</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, enim.</p>
+                    <p><span>Fitur:</span> Editing video sesuai permintaan, efek dan transisi menarik, penambahan musik dan teks, revisi hingga 2 kali.</p>
                 </div>
             </div>
         </div>
-     </div>
+    </div>
     <!-- modal box end -->
+
+    <!-- order btn start -->
+    <div class="modal-0" id="item-detail-modal-0">
+        <div class="modal-container-0">
+            <a href="#" class="close-icon-0"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <div class="product-content">
+                    <h3>Pesan sudah terkirim</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, eos.</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!-- order btn end -->
 
     <!-- feather icons -->
     <script>

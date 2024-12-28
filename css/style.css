@@ -1,5 +1,5 @@
 :root {
-    --primary: rgba(52, 195, 200, 0.668);
+    --primary: rgba(52, 195, 200, 0.667);
     --bg: rgb(17, 17, 17);
 }
 
@@ -41,9 +41,15 @@ body {
 
 .navbar .navbar-logo {
     color: #fff;
+    display: flex;
     font-weight: 700;
     font-size: 1.5rem;
     font-style: italic;
+}
+
+.navbar .navbar-logo h4 {
+    margin-left: .6rem;
+    padding-top: .5rem;
 }
 
 .navbar .navbar-logo span {
@@ -174,6 +180,17 @@ body {
     padding: 8rem 7% 1.4rem;
 }
 
+.about {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.about-active {
+    opacity: 100%;
+    transform: translateY(0);
+}
+
 .about h2,
 .services h2,
 .contact h2,
@@ -181,8 +198,6 @@ body {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 4rem;
-    transition: transform 0.5s;
-    cursor: pointer;
 }
 
 .about h2 span,
@@ -191,13 +206,6 @@ body {
 .hbg h3 span,
 .order h2 span {
     color: var(--primary);
-}
-
-.about h2:hover,
-.services h2:hover,
-.contact h2:hover,
-.order h2:hover {
-    transform: translateY(-10px);
 }
 
 .about .row {
@@ -252,12 +260,15 @@ body {
     font-size: 3rem;
     margin-bottom: 4rem;
     padding: 8rem 7% 1.4rem;
-    transition: transform 0.5s;
-    cursor: pointer;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-.judul:hover {
-    transform: translateY(-10px);
+    
+.judul-active {
+     opacity: 100%;
+     transform: translateY(0);
 }
 
 .judul span {
@@ -271,9 +282,26 @@ body {
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-.slides {
+.slider h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.slide-active {
+    opacity: 100%;
+    transform: translateY(0);
+}
+
+.slides-ppt {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -318,12 +346,24 @@ body {
     align-items: center;
     margin-top: 1.6rem;
     margin-right: .8rem;
+    margin-bottom: 3rem;
     font-weight: 200;
     font-size: 1.4rem;
     line-height: 1.4rem;
 }
 
 /* services */
+.services {
+    opacity: 0;
+    transform: scale(80%);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.services-active {
+    opacity: 100%;
+    transform: scale(100%);
+}
+
 .services h2,
 .contact h2,
 .order h2 {
@@ -403,6 +443,17 @@ body {
 }
 
 /* contact */
+.contact {
+    opacity: 0;
+    transform: scale(80%);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.contact-active {
+    opacity: 100%;
+    transform: scale(100%);
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -444,8 +495,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 1em;
     justify-content: center;
+    margin-bottom: 1em;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -461,6 +512,7 @@ body {
 
 .hbg {
     margin-top: 4rem;
+    line-height: 1.6rem;
 }
 
 .hbg h3 {
@@ -474,7 +526,22 @@ body {
     line-height: 1.6;
 }
 
+.hbg span {
+    font-weight: 500;
+}
+
 /* order */
+.order {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.order-active {
+    opacity: 100%;
+    transform: translateY(0);
+}
+
 .order .container {
     display: flex;
     flex-wrap: nowrap;
@@ -580,19 +647,19 @@ footer .credit a {
 }
 
 /* modal box */
-.modal {
+.modal, .modal-1, .modal-2, .modal-3, .modal-0 {
     display: none;
     position: fixed;
     z-index: 9999;
-    left:0;
+    left: -70px;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.modal-container {
+.modal-container, .modal-container-1, .modal-container-2, .modal-container-3, .modal-container-0 {
     position: relative;
     background-color: #fefefe;
     color: var(--bg);
@@ -601,6 +668,10 @@ footer .credit a {
     border: 1px solid #666;
     width: 80%;
     animation: slide .5s;
+}
+
+.modal-container-0 {
+    width: 40%;
 }
 
 @keyframes slide {
@@ -615,7 +686,7 @@ footer .credit a {
     }
 }
 
-.modal-container .close-icon {
+.modal-container .close-icon, .close-icon-1, .close-icon-2, .close-icon-3, .close-icon-0 {
     position: absolute;
     right: 1rem;
     border-radius: 50%;
@@ -625,7 +696,7 @@ footer .credit a {
     transition: .3s;
 }
 
-.modal-container .close-icon:hover {
+.modal-container .close-icon:hover, .close-icon-1:hover, .close-icon-2:hover, .close-icon-3:hover, .close-icon-0:hover {
     background-color: #333;
     color: #fff;
     border: 1px solid #333;
@@ -646,10 +717,19 @@ footer .credit a {
     margin-bottom: 2rem;
 }
 
+
 .modal-content p {
     font-size: 1.2rem;
     line-height: 1.8rem;
     margin-top: 1.2rem;   
+}
+
+.modal-content .btn-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
 }
 
 .modal-content a {
@@ -658,8 +738,8 @@ footer .credit a {
     width: 12rem;
     color: #fff;
     background-color: var(--primary);
-    margin-top: 3rem;
     padding: .8rem .4rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: .3s;
 }
 
@@ -673,6 +753,10 @@ footer .credit a {
     margin-left: 3rem;
 }
 
+.product-price span {
+    font-weight: 500;
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -682,6 +766,10 @@ footer .credit a {
 
     #hamburger-menu {
         display: inline-block;
+    }
+
+    .navbar .navbar-logo h4 {
+        font-size: 24px;
     }
 
     .navbar .navbar-nav {
@@ -762,7 +850,22 @@ footer .credit a {
     } 
 
     .form-container .form-group textarea {
-        max-width: 200px;
+        max-width: 450px;
+    }
+
+    .modal, .modal-1, .modal-2, .modal-3, .modal-0 {
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal-container, .modal-container-1, .modal-container-2, .modal-container-3 {
+        height: 70%;
+    }
+
+    .modal-container-0 {
+        flex-wrap: wrap;
+        height: 40%;
     }
 
     .modal-content {
@@ -797,13 +900,25 @@ footer .credit a {
     }
 
     .order .container .form-container {
-        max-width: 50px;
+        display: flex;
+        align-items: center;
+        max-width: 200px;
     }
 
     .form-container .form-group input,
     .form-container .form-group textarea,
     .form-container .form-group select {
-        max-width: 50px;
-    } 
+        max-width: 150px;
+    }
+    
+    footer .links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer .links a {
+        font-size: 80%;
+    }
     
 }
